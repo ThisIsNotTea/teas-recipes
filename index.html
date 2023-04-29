@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Recipe Book</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<title>Recipe Book</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>My Recipe Book</h1>
-	<ul>
+	<h1>Recipe Book</h1>
+	<input type="text" id="search-box" placeholder="Search...">
+	<ul id="recipe-list">
 		<li>
-	<a href="recipes/apple-cider-vinegar-concentrate.html">
-		<div class="recipe-card">
-			<h2>Apple Cider Vinegar Concentrate</h2>
-			<img src="images/apple-cider-vinegar-concentrate.jpg" alt="Apple Cider Vinegar Concentrate">
-			<p>Mix 3 tablespoons of this apple cider vinegar concentrate in a glass of water for a refreshing drink. You can also use it as a base for salad dressings, marinades, and other recipes.</p>
-		</div>
-	</a>
-</li>
-		<li>
-	<a href="recipes/apple-cider-vinegar-expectorant.html">
-		<div class="recipe-card">
-			<h2>Apple Cider Vinegar Expectorant</h2>
-			<img src="https://www.example.com/apple-cider-vinegar-expectorant.jpg" alt="Apple Cider Vinegar Expectorant">
-			<p>A natural expectorant made with apple cider vinegar, lemon juice, honey, and spices.</p>
-		</div>
-	</a>
-</li>
-		<li>
-			<a href="recipe3.html">
+			<a href="recipes/apple-cider-vinegar-concentrate.html">
 				<div class="recipe-card">
-					<h2>Recipe 3</h2>
-					<img src="https://www.example.com/recipe3.jpg" alt="Recipe 3">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat risus eu ex maximus rhoncus. Integer eu lacus blandit, bibendum nisi id, rhoncus elit. Donec feugiat sapien non urna finibus, sed facilisis ipsum cursus.</p>
+					<h2>Apple Cider Vinegar Concentrate</h2>
+					<p>A concentrated apple cider vinegar drink mixed with honey, spices, and salt.</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="recipes/apple-cider-vinegar-expectorant.html">
+				<div class="recipe-card">
+					<h2>Apple Cider Vinegar Expectorant</h2>
+					<p>A natural expectorant made with apple cider vinegar, lemon juice, honey, and spices.</p>
 				</div>
 			</a>
 		</li>
 	</ul>
+	<script>
+		// Get the search box and recipe list elements
+		const searchBox = document.getElementById('search-box');
+		const recipeList = document.getElementById('recipe-list');
+
+		// Add event listener to search box
+		searchBox.addEventListener('input', function() {
+			// Get the search term and convert to lowercase
+			const searchTerm = searchBox.value.toLowerCase();
+
+			// Loop through each recipe card
+			for (let i = 0; i < recipeList.children.length; i++) {
+				const recipeCard = recipeList.children[i];
+
+				// Get the recipe title and convert to lowercase
+				const recipeTitle = recipeCard.querySelector('h2').textContent.toLowerCase();
+
+				// If the search term is not found in the recipe title, hide the recipe card
+				if (!recipeTitle.includes(searchTerm)) {
+					recipeCard.style.display = 'none';
+				} else {
+					recipeCard.style.display = 'block';
+				}
+			}
+		});
+	</script>
 </body>
 </html>
