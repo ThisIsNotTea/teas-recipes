@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<title>Recipe Book</title>
 	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 	<h1>Recipe Book</h1>
 	<input type="text" id="search-box" placeholder="Search...">
@@ -26,30 +28,66 @@
 			</a>
 		</li>
 		<li>
-  <a href="recipes/blackberry-rhubarb-crumble.html">
-    <div class="recipe-card">
-      <h2>Blackberry Rhubarb Crumble</h2>
-      <p>A delicious summer dessert made with fresh blackberries and rhubarb, topped with a sweet and crunchy crumble.</p>
-    </div>
-  </a>
-</li>
+			<a href="recipes/blackberry-rhubarb-crumble.html">
+				<div class="recipe-card">
+					<h2>Blackberry Rhubarb Crumble</h2>
+					<p>A delicious summer dessert made with fresh blackberries and rhubarb, topped with a sweet and
+						crunchy crumble.</p>
+				</div>
+			</a>
+		</li>
 		<li>
-	<a href="recipes/bone-broth.html">
-		<div class="recipe-card">
-			<h2>Bone Broth</h2>
-			<p>Learn how to make delicious and nutritious bone broth using chicken carcasses, peppercorns, and water. Optional additions include garlic and apple cider vinegar.</p>
-		</div>
-	</a>
-</li>
+			<a href="recipes/bone-broth.html">
+				<div class="recipe-card">
+					<h2>Bone Broth</h2>
+					<p>Learn how to make delicious and nutritious bone broth using chicken carcasses, peppercorns, and
+						water. Optional additions include garlic and apple cider vinegar.</p>
+				</div>
+			</a>
+		</li>
+
+		<li>
+			<a href="recipes/easy-fish-sandwich.html">
+				<div class="recipe-card">
+					<h2>Easy Fish Sandwich</h2>
+					<p>Learn how to make a delicious and easy fish sandwich with this recipe. Frozen breaded fish
+						filets, buns, and a homemade spicy sauce make this sandwich a quick and easy meal.</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="recipes/golden-tea.html">
+				<div class="recipe-card">
+					<h2>Golden Tea</h2>
+					<p>Cloves, nutmeg, turmeric, and other warming spices combine with honey for a comforting and healthy tea.</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="recipes/jezebel-sauce.html">
+				<div class="recipe-card">
+					<h2>Jezebel Sauce</h2>
+					<p>Sweet and spicy sauce used as an appetizer over cream cheese and a compliment to pork.</p>
+				</div>
+			</a>
+		</li>
 		
-<li>
-    <a href="recipes/easy-fish-sandwich.html">
-        <div class="recipe-card">
-            <h2>Easy Fish Sandwich</h2>
-            <p>Learn how to make a delicious and easy fish sandwich with this recipe. Frozen breaded fish filets, buns, and a homemade spicy sauce make this sandwich a quick and easy meal.</p>
-        </div>
-    </a>
-</li>
+		<li>
+			<a href="recipes/kettlecorn.html">
+				<div class="recipe-card">
+					<h2>Kettlecorn</h2>
+					<p>A delicious and easy-to-make snack, Kettlecorn is perfect for movie nights or afternoon munchies.</p>
+				</div>
+			</a>
+		</li>
+		<li>
+			<a href="recipes/lemon-curd.html">
+				<div class="recipe-card">
+					<h2>Lemon Curd</h2>
+					<p>Delicious and tangy lemon curd recipe that can be used as a filling for cakes, cupcakes, pies, and more.</p>
+				</div>
+			</a>
+		</li>
 	</ul>
 	<script>
 		// Get the search box and recipe list elements
@@ -57,7 +95,7 @@
 		const recipeList = document.getElementById('recipe-list');
 
 		// Add event listener to search box
-		searchBox.addEventListener('input', function() {
+		searchBox.addEventListener('input', function () {
 			// Get the search term and convert to lowercase
 			const searchTerm = searchBox.value.toLowerCase();
 
@@ -78,4 +116,5 @@
 		});
 	</script>
 </body>
+
 </html>
